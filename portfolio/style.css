@@ -1,0 +1,263 @@
+:root {
+  --w-container: 980px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+@media (max-width: 999px) {
+  :root {
+    --w-container: 80vw;
+  }
+}
+
+.container {
+  width: var(--w-container);
+  margin: 0 auto;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+@media (max-width: 839px) {
+  .container-header {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 620px) {
+  .container-header,
+  .title {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 620px) {
+  .title {
+    margin-top: 50px;
+  }
+}
+
+img {
+  max-width: 20%;
+  height: auto;
+}
+
+.title {
+  align-self: flex-end;
+}
+
+@media (max-width: 620px) {
+  .title {
+    align-self: center;
+  }
+}
+
+.ava {
+  position: relative;
+  width: 195px;
+  height: 195px;
+  border: 1px solid;
+  border-radius: 50%;
+  background-image: url(./src/r.jpg);
+  background-position: center center;
+  background-size: 100%;
+}
+
+.ava::after {
+  content: 'junior/trainee Front-end developer';
+  color: #006eff;
+  position: absolute;
+  width: 350px;
+  bottom: -35px;
+  left: 0px;
+  font-size: 1.5rem;
+}
+
+.circule {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: 145px;
+  left: 160px;
+  cursor: pointer;
+}
+
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgb(250, 224, 7);
+  background: linear-gradient(
+    0deg,
+    rgba(250, 224, 7, 1) 0%,
+    rgba(250, 224, 7, 1) 51%,
+    rgba(9, 5, 246, 1) 52%,
+    rgba(9, 5, 246, 1) 100%
+  );
+  color: transparent;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+[data-tooltip]:hover::after {
+  width: 125px;
+  height: 25px;
+  border-radius: 15px;
+  padding: 3px 0 0 8px;
+  color: rgb(138, 138, 138);
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin-top: 40px;
+}
+
+@media (max-width: 839px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.hr-container {
+  margin-top: 50px;
+}
+
+.details li {
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.in {
+  max-width: 40px;
+  height: auto;
+  margin-left: 10px;
+  transition: 0.4s;
+}
+
+.in:hover {
+  transform: scale(1.2);
+}
+
+/* .article {
+  padding: 30px;
+  background-image: url(src/bgbroun.svg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.article h2,
+.article p {
+  color: rgb(255, 209, 4);
+} */
+
+.wrap-article {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+@media (max-width: 839px) {
+  .wrap-article {
+    width: 100%;
+  }
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+h2 {
+  margin: 30px 0px 30px 0px;
+}
+
+.about {
+  width: 100%;
+  font-size: 1.4rem;
+}
+
+ul {
+  margin-left: 30px;
+}
+
+ul li {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.year {
+  margin-left: 100px;
+}
+
+.content-myProjects-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+iframe {
+  margin: 10px 0 10px 0;
+  width: var(--w-container);
+  height: 700px;
+  align-self: center;
+  object-fit: cover;
+}
+
+.footer-container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.github {
+  display: flex;
+  margin: 0px 10% 0px 10%;
+}
+
+.github-img {
+  max-width: 85%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  width: 60px;
+}
+
+.madein {
+  padding-top: 20px;
+  margin-right: 10%;
+}
+
+.logo {
+  display: flex;
+  width: 80px;
+  height: 30px;
+  background-image: url('https://rs.school/images/rs_school_js.svg');
+  background-position: center center;
+  margin-top: 12px;
+}
