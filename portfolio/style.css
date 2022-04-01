@@ -7,6 +7,41 @@
   padding: 0px;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  color: #fff;
+}
+
+#bg-img {
+  position: fixed;
+  width: 120vw;
+  height: 130vh;
+  top: -10vh;
+  right: 0;
+  bottom: -10vh;
+  left: -10vw;
+  margin: 0 auto;
+  background-image: url(./src/images/matrix.webp);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  z-index: -1;
+}
+
+main {
+  position: relative;
+  z-index: 99;
+}
+
 @media (max-width: 999px) {
   :root {
     --w-container: 80vw;
@@ -61,13 +96,17 @@ img {
   }
 }
 
+.wrapper {
+  background-color: rgba(50, 56, 77, 0.7);
+}
+
 .ava {
   position: relative;
   width: 195px;
   height: 195px;
   border: 1px solid;
   border-radius: 50%;
-  background-image: url(./src/r.jpg);
+  background-image: url(./src/images/r.jpg);
   background-position: center center;
   background-size: 100%;
 }
