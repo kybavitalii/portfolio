@@ -26,7 +26,6 @@ export const parallaxEffect = () => {
   setMouseParalax();
 
   const moveBg = (e) => {
-    console.log(e.pageX, e.pageY);
     const paralaxWidth = paralax.offsetWidth;
     const paralaxHeight = paralax.offsetHeight;
 

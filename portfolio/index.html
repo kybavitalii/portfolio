@@ -5,14 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css"
-    />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
-    <script>
-      hljs.initHighlightingOnLoad();
-    </script>
-    <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="./src/static/apple-touch-icon.png"
@@ -37,6 +29,16 @@
     />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/rainbow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/languages/go.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
     <link rel="stylesheet" href="./style.css" />
     <script type="module" defer src="./main.js"></script>
     <title>Portfolio</title>
@@ -51,7 +53,7 @@
           </div>
 
           <div class="title">
-            <h1>Vitalii Kyba</h1>
+            <h2>Vitalii Kyba</h2>
           </div>
         </div>
       </header>
@@ -61,24 +63,26 @@
         </div>
         <div class="container main-container">
           <div class="wrapper">
-            <h2>Details:</h2>
-            <ul class="details">
-              <li>email: vitaliikyba@yahoo.com</li>
-              <li>phone: +380(93)02-29-299</li>
-              <li>telegram: @k_vitalii</li>
-              <li>skype: live:k190583</li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/vitalii-kyba-6885aa234"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><img src="./src/images/in.png" class="in" alt="LinkedIn"
-                /></a>
-              </li>
-            </ul>
+            <div class="bg-dark">
+              <h2>Details:</h2>
+              <ul class="details">
+                <li>email: vitaliikyba@yahoo.com</li>
+                <li>phone: +380(93)02-29-299</li>
+                <li>telegram: @k_vitalii</li>
+                <li>skype: live:k190583</li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/vitalii-kyba-6885aa234"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><img src="./src/images/in.png" class="in" alt="LinkedIn"
+                  /></a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="wrap-article">
-            <div class="article">
+            <div class="bg-dark">
               <h2>About myself</h2>
               <p class="about">
                 I like solving problems when writing code. As a result, it
@@ -88,7 +92,7 @@
                 person in general.
               </p>
             </div>
-            <div>
+            <div class="bg-dark">
               <h2>Skills:</h2>
               <ul>
                 <li>HTML</li>
@@ -100,26 +104,26 @@
                 <li>Webpack</li>
               </ul>
             </div>
-            <div>
+            <div class="bg-dark">
               <h2>Sample code:</h2>
               <pre>
-                <code>
-                  const arr = ['12', '56', '32', '69'];
+                <code class="language-javascript bg-transparent">
+                  const array = ['12', '56', '32', '69'];
 
-                  const toObject = (arr) => {
-                    const obj = {};
-                    arr.reduce((prew, next, i, arr) => {
-                      obj[i] = next;
-                    }, arr[0]);
-                    return obj;
+                  const toObject = (array) => {
+                    const object = {};
+                    array.reduce((prew, next, i, array) => {
+                      object[i] = next;
+                    }, array[0]);
+                    return object;
                   };
                   
-                  console.log(toObject(arr));
+                  console.log(toObject(array));
                   //{0: '12', 1: '56', 2: '32', 3: '69'}
                 </code>
               </pre>
             </div>
-            <div>
+            <div class="bg-dark">
               <h2>Courses:</h2>
               <ul>
                 <li>Basics of web development, EdEra</li>
@@ -129,8 +133,8 @@
                 <li>RS School, JS Developer</li>
               </ul>
             </div>
-            <div>
-              <h2>Education</h2>
+            <div class="bg-dark">
+              <h2>Education:</h2>
               <h3>Specialist, Sumy State University, Sumy</h3>
               <p class="year">​2011 - 2017</p>
               <p>
@@ -138,36 +142,43 @@
                 Engineering and Electromechanics"
               </p>
             </div>
-            <div>
+            <div class="bg-dark">
               <h2>English - A2</h2>
             </div>
           </div>
         </div>
       </section>
       <section class="myProjects">
-        <div class="container header-myProjects-container">
-          <h2>My projects:</h2>
+        <div class="container header-myProjects-container bg-dark">
+          <h2 class="bg-dark">My projects:</h2>
           <p>
-            Мій досвід, та досягнення на посаді Front-end Developer: Я
-            самостійно навчився верстати сторінки, використовуючи технології
-            HTML, CSS, SCSS, JavaScript, Figma. Динамічно генерувати, змінювати,
-            видаляти та вставляти компоненти в DOM, а також керувати змінними в
-            CSS за допомогою JavaScript. Маю досвід роботи з різними API, такими
-            як погода, новини, аудіо, відео, в т.ч. youtube... Також є певний
-            досвід в написанні SPA на vanilla JavaScript + TypeScript такі
-            проекти: ( English for kids та Match-match-game, але вони не були
-            закінчені на 100%, і під час війни взагалі приватний репозиторій в
-            RSSchool був видалений). Також нещодавно пройшов повторно курс по
-            основам React на freecodecamp (щоб освіжити знання). Також є досвід
-            написання власних RestFull API, використовуючи node.js, express.js,
-            mongoDB, JWT. З того що можна подивитись (другий приватний
-            репозиторій в RSSchool) : momentum - якщо в верхньому правому куті
-            ввести правильно назву міста англійською, то під назвою з'явиться
-            поточна погода в тому місті, також у верхньому лівому куті екрана є
-            аудіоплеєр, внизу цитата дня (при оновленні сторінки цитата рандомно
-            змінюється), фото фону - це слайдер на vanilla JavaScript, при цьому
-            категорії фотографій автоматично змінюються в залежності від часу
-            доби (ранок, день, вечір, ніч), та кожну годину. - momentum :
+            My experience and achievements as a Front-end Developer: I learned
+            to markup pages on my own, using HTML, CSS, SCSS, JavaScript, Figma
+            technologies. Dynamically generate, modify, publish and insert
+            components in the DOM, as well as manage variables in CSS using
+            JavaScript. I have experience with other APIs, such as weather,
+            news, audio, video, incl. youtube... I used Git, Webpack. There is
+            also some experience in writing SPA for vanilla JavaScript +
+            TypeScript such projects. I also recently took a second React course
+            on freecodecamp (to refresh my knowledge). There is also experience
+            writing RestFull API using node.js, express.js, mongoDB, JWT.<br />
+            - Momentum - js task. If you enter the correct name in the upper
+            right corner city in English, the current weather will appear under
+            the name city, also in the upper left corner of the screen is an
+            audio player, below quote of the day (when the page is refreshed,
+            the quote changes randomly), photo background is a slider on vanilla
+            JavaScript, with categories photos automatically change depending on
+            the time of day (morning, day, evening, night), and every hour:
+            <span
+              ><a
+                clacc="gotomomentum"
+                target="blank"
+                href="http://rolling-scopes-school.github.io/kybavitalii-JSFE2021Q3/momentum/src/"
+              >
+                &#8594; go to momentum</a
+              ></span
+            >
+            <!--momentum :
             https://rolling-scopes-school.github.io/kybavitalii-JSFE2021Q3/momentum/src/
             Зараз працюю над: museum, готово приблизно 50%. Блок Video Jorney
             повністю готовий поки що лише на локальній версії, в деплой ще не
@@ -176,11 +187,12 @@
             https://rolling-scopes-school.github.io/kybavitalii-JSFE2021Q3/muesem-adaptive
             калькулятор доходів - 80%. Під час виконання цього проєкта зіткнувся
             з кількома викликами, деякі ще належить вирішити. - online counter:
-            https://kybavitalii.github.io/online-counter/
+            https://kybavitalii.github.io/online-counter/ -->
           </p>
         </div>
         <div class="container content-myProjects-container">
           <iframe
+            class="precode"
             src="https://rolling-scopes-school.github.io/kybavitalii-JSFE2021Q3/momentum/src/"
             name="targetframe"
             allowTransparency="true"
@@ -188,8 +200,46 @@
             frameborder="0"
           >
           </iframe>
+          <p class="bg-dark">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+            expedita, ipsam quisquam dolores molestias labore sed accusantium
+            quae neque ducimus sunt aspernatur eius sapiente ex incidunt ea
+            voluptatem sequi officia.<span
+              ><a
+                clacc="gotomomentum"
+                target="blank"
+                href="https://rolling-scopes-school.github.io/kybavitalii-JSFE2021Q3/muesem-adaptive"
+              >
+                &#8594; go to museum</a
+              ></span
+            >
+          </p>
           <iframe
+            class="precode"
             src="https://rolling-scopes-school.github.io/kybavitalii-JSFE2021Q3/muesem-adaptive"
+            name="targetframe"
+            allowTransparency="true"
+            scrolling="true"
+            frameborder="0"
+          >
+          </iframe>
+          <p class="bg-dark">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+            expedita, ipsam quisquam dolores molestias labore sed accusantium
+            quae neque ducimus sunt aspernatur eius sapiente ex incidunt ea
+            voluptatem sequi officia.<span
+              ><a
+                clacc="gotomomentum"
+                target="blank"
+                href="https://kybavitalii.github.io/online-counter/"
+              >
+                &#8594; go to counter</a
+              ></span
+            >
+          </p>
+          <iframe
+            class="precode"
+            src="https://kybavitalii.github.io/online-counter/"
             name="targetframe"
             allowTransparency="true"
             scrolling="true"
@@ -213,7 +263,7 @@
         <div class="madein">
           <h4>2021</h4>
         </div>
-        <!-- <div class="logo">
+        <div class="logo">
           <a href="https://rs.school/js/">
             <img
               class="logo-img"
@@ -221,7 +271,7 @@
               alt="logo"
             />
           </a>
-        </div> -->
+        </div>
       </div>
     </footer>
   </body>
