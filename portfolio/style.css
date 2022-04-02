@@ -18,6 +18,7 @@ h4,
 p,
 li {
   color: #fff;
+  font-family: sans-serif;
 }
 
 #bg-img {
@@ -33,13 +34,7 @@ li {
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-attachment: fixed; */
   z-index: -1;
-}
-
-main {
-  position: relative;
-  z-index: 99;
 }
 
 @media (max-width: 999px) {
@@ -90,14 +85,45 @@ img {
   align-self: flex-end;
 }
 
+.title h2 {
+  font-size: 36px;
+  text-shadow: 6px -6px 4px rgba(0, 0, 0), -6px -6px 4px rgba(0, 0, 0),
+    0px -6px 4px rgba(0, 0, 0), -6px 0px 4px rgba(0, 0, 0),
+    6px 0px 4px rgba(0, 0, 0), -6px 6px 4px rgba(0, 0, 0),
+    6px 6px 4px rgba(0, 0, 0), 0px 6px 4px rgba(0, 0, 0);
+}
+
 @media (max-width: 620px) {
   .title {
     align-self: center;
   }
 }
 
-.wrapper {
-  background-color: rgba(50, 56, 77, 0.7);
+.bg-dark {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 15px;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.hljs-params {
+  color: rgb(107, 104, 250);
+}
+
+.hljs-string {
+  color: rgb(255, 139, 44);
+}
+
+.hljs-comment {
+  color: rgb(0, 131, 0);
+}
+
+.hljs-property {
+  color: rgb(255, 242, 121);
 }
 
 .ava {
@@ -114,9 +140,12 @@ img {
 .ava::after {
   content: 'junior/trainee Front-end developer';
   color: #006eff;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 10px;
   position: absolute;
   width: 350px;
-  bottom: -35px;
+  bottom: -49px;
   left: 0px;
   font-size: 1.5rem;
 }
@@ -251,18 +280,34 @@ ul li {
   margin-left: 100px;
 }
 
+.header-myProjects-container p {
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  word-spacing: 7px;
+}
+
 .content-myProjects-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-iframe {
+.precode {
   margin: 10px 0 10px 0;
   width: var(--w-container);
   height: 700px;
   align-self: center;
   object-fit: cover;
+}
+
+a {
+  color: rgb(250, 224, 7);
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .footer-container {
@@ -280,6 +325,8 @@ iframe {
 .github-img {
   max-width: 85%;
   height: auto;
+  border: 1px solid #fff;
+  border-radius: 50%;
 }
 
 a {
