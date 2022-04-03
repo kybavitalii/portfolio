@@ -307,9 +307,11 @@ ul li {
 .iframes {
   margin: 10px 0 10px 0;
   width: var(--w-container);
-  height: 700px;
+  height: 70vh;
+  max-height: 700px;
   align-self: center;
   object-fit: contain;
+  border: none;
 }
 
 a {
