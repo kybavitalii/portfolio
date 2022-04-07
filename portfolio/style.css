@@ -314,6 +314,12 @@ ul li {
   border: none;
 }
 
+.yelloy {
+  color: rgb(250, 224, 7);
+  font-size: 22px;
+  font-weight: normal;
+}
+
 a {
   color: rgb(250, 224, 7);
   text-decoration: none;
