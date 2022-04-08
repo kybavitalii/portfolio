@@ -82,13 +82,6 @@ li {
   }
 }
 
-/* @media (max-width: 620px) {
-  .title {
-    margin-top: 80px;
-    align-self: center;
-  }
-} */
-
 img {
   max-width: 20%;
   height: auto;
@@ -233,6 +226,7 @@ img {
 }
 
 .in {
+  width: 100%;
   max-width: 40px;
   height: auto;
   margin-left: 10px;
@@ -242,18 +236,6 @@ img {
 .in:hover {
   transform: scale(1.2);
 }
-
-/* .article {
-  padding: 30px;
-  background-image: url(src/bgbroun.svg);
-  background-position: center center;
-  background-size: cover;
-}
-
-.article h2,
-.article p {
-  color: rgb(255, 209, 4);
-} */
 
 .wrap-article {
   display: flex;
@@ -384,6 +366,7 @@ a {
 }
 
 .github-img {
+  width: 100px;
   max-width: 85%;
   height: auto;
   border: 1px solid #fff;
