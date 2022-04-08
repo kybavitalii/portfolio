@@ -37,6 +37,12 @@ li {
   z-index: -1;
 }
 
+@media (max-width: 800px) {
+  #bg-img {
+    background-image: url(./src/images/matrix-mobile.webp);
+  }
+}
+
 @media (max-width: 999px) {
   :root {
     --w-container: 80vw;
@@ -133,7 +139,7 @@ img {
   height: 195px;
   border: 1px solid;
   border-radius: 50%;
-  background-image: url(./src/images/r.jpg);
+  background-image: url(./src/images/r.webp);
   background-position: center center;
   background-size: 100%;
 }
