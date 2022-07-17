@@ -308,7 +308,6 @@ ul li {
 .museum-frame {
   background-size: contain;
   background-repeat: no-repeat;
-  cursor: pointer;
   transition: 0.5s;
 }
 
