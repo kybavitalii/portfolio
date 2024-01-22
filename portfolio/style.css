@@ -138,7 +138,7 @@ img {
 }
 
 .ava::after {
-  content: 'junior/trainee Front-end developer';
+  content: 'junior Front-end developer';
   color: #006eff;
   background-color: #fff;
   border-radius: 15px;
@@ -303,7 +303,7 @@ ul li {
 }
 
 .exchange-frame,
-.counter-frame,
+.tetris-frame,
 .momentum-frame,
 .museum-frame {
   background-size: contain;
@@ -319,8 +319,8 @@ ul li {
   background-image: url(./src/images/museum.webp);
 }
 
-.counter-frame {
-  background-image: url(./src/images/counter.webp);
+.tetris-frame {
+  background-image: url(./src/images/tetris.webp);
 }
 
 .exchange-frame {
@@ -329,7 +329,7 @@ ul li {
 
 @media (min-width: 870px) {
   .exchange-frame:hover,
-  .counter-frame:hover,
+  .tetris-frame:hover,
   .momentum-frame:hover,
   .museum-frame:hover {
     transform: translateX(5%) scale(1.1);
